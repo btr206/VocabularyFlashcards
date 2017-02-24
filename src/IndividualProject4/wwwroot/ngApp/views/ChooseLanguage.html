@@ -1,0 +1,6 @@
+﻿<table>
+    <tr ng-repeat="language in ctrl.languages">
+        <td>{{language.name}}</td>
+        <td><img width="128" height="128" src="images/{{language.flagPath}}" ng-click="ctrl.selectLanguage(language.name)"/></td>
+    </tr>
+</table>   

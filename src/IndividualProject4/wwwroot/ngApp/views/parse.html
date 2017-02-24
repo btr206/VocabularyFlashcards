@@ -1,0 +1,22 @@
+﻿Type or paste in word pairs so that whitespace separates each word and each pair. 
+Words in English will by default be on the left side and words in the target language on 
+the right side. If the list you paste in is in the reverse order, you may use the "Flip sides" feature. 
+Submit list will save the list and its members to the server. Be sure to fill in the topic and language name!
+<br/>
+<br/>
+<label for="comment">Word pairs:</label>
+<textarea class="form-control" rows="5" id="comment" ng-model="ctrl.textParse"></textarea>
+<button class="btn btn-primary" ng-click="ctrl.parse()">
+    Parse
+</button>
+
+<table class="table table-hover table-striped">
+    <tr ng-repeat="pair in ctrl.pairs">
+        <td>{{pair.english}}</td>
+        <td>{{pair.target}}</td>
+    </tr>
+</table>
+<label for="lng">Language:</label><input class="form-control" id="lng" ng-model="ctrl.language"/>
+<label for="tpc">Topic: </label><input class="form-control" id="tpc" ng-model="ctrl.topic"/>
+<button class="btn btn-primary" ng-click="ctrl.flip()">Flip sides</button>
+<button  class="btn btn-primary" ng-click="ctrl.submit()">Submit list</button>

@@ -1,0 +1,13 @@
+﻿<table class="table table-hover table-bordered table-striped">
+    <thead>
+        {{ctrl.topic}}
+        </br>
+    <th>English</th>
+    <th>{{ctrl.language}}</th>
+    </thead>
+    <tr ng-repeat="pair in ctrl.listPairs">
+        <td>{{pair.english}}</td>
+        <td>{{pair.target}}</td>
+    </tr>
+</table>
+<button class="btn btn-primary" ng-click="ctrl.gotoQuiz()">Take Quiz</button>

@@ -1,0 +1,8 @@
+﻿<table class="table table-hover table-striped">
+    <tr ng-repeat="pair in ctrl.quizLists">
+        <td>{{pair.topic}}</td>
+        <td>in</td>
+        <td>{{pair.language}}</td>
+        <td><button class="btn btn-primary" ng-click="ctrl.testMemory(pair.topic)">Select</button></td>
+    </tr>
+</table>

@@ -1,0 +1,17 @@
+﻿<table class="table table-hover table-bordered table-striped">
+    <th>Language</th><th>Topic</th><th></th>
+    <th ng-show="account.getUserName()=='Blair.Russell@CoderCamps.com'"></th>
+    <th ng-show="account.getUserName()=='Blair.Russell@CoderCamps.com'"></th>
+<tr ng-repeat="list in ctrl.lists">
+    
+    <td>{{list.topic}}</td><td>{{list.language}}</td>
+    <td><button class="btn btn-info" ng-click="ctrl.edit(list.language, list.topic)">Edit</button>
+    
+   
+    
+    <td ng-show="account.getUserName()=='Blair.Russell@CoderCamps.com'"><button class="btn btn-info" ng-click="ctrl.editTopic(list.topic, $index)">Change List Name</button></td>
+    <td ng-show="account.getUserName()=='Blair.Russell@CoderCamps.com'"><button class="btn btn-danger" ng-click="ctrl.deleteTopic(list.topic, list.language, $index)">Delete List</button></td> 
+  
+</tr>
+</table>
+<button ng-click="ctrl.gotoParse()">Add list</button>
